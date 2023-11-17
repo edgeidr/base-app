@@ -1,0 +1,12 @@
+[Laravel]
+
+Download Laravel Installer using Composer (optional and one-time run only)
+    - composer global require laravel/installer
+
+Initialize
+    - laravel new {folder_name}
+    - cd {folder_name}
+    - (update .env)
+    - composer require laravel/sanctum
+    - php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+    - php artisan migrate
