@@ -6,6 +6,7 @@ import { createPinia } from 'pinia';
 import router from './router/router.js';
 
 import './assets/scss/styles.scss';
+import CustomComponent from './plugins/custom-components.js';
 import VueuseDirectives from './plugins/vueuse-directives.js';
 import App from './App.vue';
 
@@ -24,5 +25,6 @@ pinia.use(({ store }) => {
 
 app.use(router);
 app.use(pinia);
+app.use(CustomComponent);
 app.use(VueuseDirectives);
 app.mount('#app');

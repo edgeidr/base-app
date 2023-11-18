@@ -1,0 +1,14 @@
+.auth-wrapper {
+	display: grid;
+	place-items: center;
+	min-height: 100dvh;
+	padding: var(--spc-md);
+}
+
+.auth-card {
+	width: min(90%, 30rem);
+	height: min(80%, 40rem);
+	padding: var(--spc-lg) var(--spc-md);
+	border-radius: var(--br-lg);
+	text-align: center;
+}

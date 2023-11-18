@@ -16,7 +16,10 @@ html {
 
 body {
 	min-height: 100dvh;
-	font-family: var(--font-body, 'Arial');
+	line-height: 1.5;
+	font-family: var(--f-body);
+	color: var(--clr-text);
+	background-color: var(--clr-background);
 }
 
 #app {
@@ -46,5 +49,31 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--font-header, 'Verdana');
+	font-family: var(--f-header);
+	font-weight: var(--fw-bold);
+	line-height: 1.1;
+}
+
+h1 {
+	font-size: var(--fs-4xl);
+}
+
+h2 {
+	font-size: var(--fs-3xl);
+}
+
+h3 {
+	font-size: var(--fs-2xl);
+}
+
+h4 {
+	font-size: var(--fs-xl);
+}
+
+h5 {
+	font-size: var(--fs-lg);
+}
+
+h6 {
+	font-size: var(--fs-md);
 }
