@@ -45,6 +45,12 @@ const routes = [
 				name: 'dev-input',
 				meta: { title: 'Input' },
 				component: () => import('../pages/dev/input/DevInput.vue')
+			},
+			{
+				path: 'button',
+				name: 'dev-button',
+				meta: { title: 'Button' },
+				component: () => import('../pages/dev/button/DevButton.vue')
 			}
 		]
 	}

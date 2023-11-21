@@ -1,0 +1,60 @@
+.button {
+	--_clr-background: var(--clr-background--100);
+	--_clr-text: var(--clr-text--900);
+
+	position: relative;
+	background-color: var(--_clr-background);
+	padding: var(--spc-md) var(--spc-lg);
+	border-radius: var(--br-xs);
+	border: none;
+	box-shadow: var(--shd-md);
+	width: 100%;
+	font-weight: var(--fw-bold);
+	color: var(--_clr-text);
+	text-align: center;
+	cursor: pointer;
+
+	&:focus-visible {
+		outline: var(--outline);
+		outline-offset: var(--outline-offset);
+	}
+
+	&:active {
+		filter: brightness(80%);
+	}
+
+	&.button--primary {
+		--_clr-background: var(--clr-primary);
+		--_clr-text: var(--clr-primary--900);
+	}
+
+	&.button--secondary {
+		--_clr-background: var(--clr-secondary);
+		--_clr-text: var(--clr-secondary--100);
+	}
+
+	&.button--accent {
+		--_clr-background: var(--clr-accent);
+		--_clr-text: var(--clr-accent--900);
+	}
+
+	&.button--success {
+		--_clr-background: var(--clr-success);
+		--_clr-text: var(--clr-success--900);
+	}
+
+	&.button--danger {
+		--_clr-background: var(--clr-danger);
+		--_clr-text: var(--clr-danger--100);
+	}
+
+	&.button--warning {
+		--_clr-background: var(--clr-warning);
+		--_clr-text: var(--clr-warning--900);
+	}
+
+	&.button--info {
+		--_clr-background: var(--clr-info);
+		--_clr-text: var(--clr-info--100);
+	}
+}

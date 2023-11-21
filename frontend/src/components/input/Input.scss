@@ -14,8 +14,8 @@
 	&:focus-within {
 		--_clr-label: var(--clr-accent);
 
-		outline: 2px solid var(--clr-primary);
-		outline-offset: 3px;
+		outline: var(--outline);
+		outline-offset: var(--outline-offset);
 	}
 
 	&.valid {
