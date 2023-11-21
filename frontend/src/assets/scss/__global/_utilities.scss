@@ -14,7 +14,7 @@
 }
 
 // SPACING
-@each $size in variables.$sizes {
+@each $size in variables.$spacing-sizes {
 	.p {
 		&-#{$size} {
 			padding: var(--spc-#{$size});

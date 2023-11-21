@@ -1,4 +1,5 @@
 $sizes: ('2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl');
+$spacing-sizes: ('2xs', 'xs', 'sm', 'md', 'lg', 'xl', '2xl', 'auto');
 $sides: (
 	'top': 't',
 	'bottom': 'b',
@@ -6,4 +7,15 @@ $sides: (
 	'right': 'r',
 	'block': 'y',
 	'inline': 'x'
+);
+$colors: (
+	'primary': #66fcf1,
+	'secondary': #1f2833,
+	'accent': #45a29e,
+	'text': #c5c6c7,
+	'background': #0b0c10,
+	'success': #00ff00,
+	'danger': #ff0000,
+	'warning': #ffff00,
+	'info': #0000ff
 );

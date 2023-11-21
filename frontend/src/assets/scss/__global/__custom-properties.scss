@@ -1,13 +1,6 @@
-:root {
-	--clr-text: #ffffff;
-	--clr-background: #181818;
-	--clr-primary: #2b3d50;
-	--clr-secondary: #edf1f2;
-	--clr-accent: #8d43ad;
-	--clr-white: #fafafa;
-	--clr-black: #181818;
-	--clr-opaque: color-mix(in oklab, var(--clr-white), transparent 77%);
+@use './__variables' as variables;
 
+:root {
 	--f-header: 'Verdana';
 	--f-subheader: 'Verdana';
 	--f-body: 'Arial';
@@ -28,13 +21,14 @@
 	--fs-3xl: 3.158rem;
 	--fs-4xl: 4.21rem;
 
-	--spc-2xs: 0.5rem;
-	--spc-xs: 0.875rem;
-	--spc-sm: 1.5rem;
-	--spc-md: 2rem;
-	--spc-lg: 2.5rem;
-	--spc-xl: 3rem;
-	--spc-2xl: 4rem;
+	--spc-2xs: 0.375rem;
+	--spc-xs: 0.5rem;
+	--spc-sm: 0.75rem;
+	--spc-md: 1rem;
+	--spc-lg: 1.5rem;
+	--spc-xl: 2rem;
+	--spc-2xl: 3rem;
+	--spc-auto: auto;
 
 	--br-2xs: 0.25rem;
 	--br-xs: 0.375rem;
@@ -47,4 +41,19 @@
 
 	--shd-md: 0 1px 3px 0 rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4);
 	--shd-lg: 0 1px 3px 2px rgb(0 0 0 / 0.4), 0 1px 2px -1px rgb(0 0 0 / 0.4);
+
+	@each $color, $color-value in variables.$colors {
+		--clr-#{$color}: #{$color-value};
+		--clr-#{$color}--100: color-mix(in oklab, #{$color-value} 30%, white);
+		--clr-#{$color}--200: color-mix(in oklab, #{$color-value} 50%, white);
+		--clr-#{$color}--300: color-mix(in oklab, #{$color-value} 70%, white);
+		--clr-#{$color}--400: color-mix(in oklab, #{$color-value} 90%, white);
+		--clr-#{$color}--500: #{$color-value};
+		--clr-#{$color}--600: color-mix(in oklab, #{$color-value} 90%, black);
+		--clr-#{$color}--700: color-mix(in oklab, #{$color-value} 70%, black);
+		--clr-#{$color}--800: color-mix(in oklab, #{$color-value} 50%, black);
+		--clr-#{$color}--900: color-mix(in oklab, #{$color-value} 30%, black);
+		--clr-#{$color}--opaque: color-mix(in oklab, #{$color-value}, transparent 77%);
+		--clr-#{$color}--transparent: color-mix(in oklab, #{$color-value}, transparent 90%);
+	}
 }

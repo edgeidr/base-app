@@ -1,0 +1,47 @@
+.input-wrapper {
+	--_clr-label: var(--clr-text--700);
+
+	position: relative;
+	background-color: var(--clr-text--100);
+	padding-inline: var(--spc-sm);
+	padding-block: var(--spc-xs);
+	border-radius: var(--br-xs);
+	border: none;
+	box-shadow: var(--shd-md);
+	width: 100%;
+	cursor: text;
+
+	&:focus-within {
+		--_clr-label: var(--clr-accent);
+
+		outline: 2px solid var(--clr-primary);
+		outline-offset: 3px;
+	}
+
+	&.valid {
+		--_clr-label: var(--clr-accent);
+	}
+
+	&.invalid {
+		--_clr-label: var(--clr-danger);
+	}
+}
+
+.input-label {
+	display: block;
+	width: fit-content;
+	color: var(--_clr-label);
+	line-height: 1;
+	font-size: var(--fs-sm);
+}
+
+.input {
+	border: none;
+	outline: none;
+	margin-top: var(--spc-2xs);
+	color: var(--clr-background);
+	width: 100%;
+	font-size: var(--fs-md);
+	line-height: 1;
+	background-color: inherit;
+}

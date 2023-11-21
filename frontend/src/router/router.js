@@ -32,7 +32,21 @@ const routes = [
 	{
 		path: '/dev',
 		name: 'dev',
-		component: () => import('../pages/dev/Dev.vue')
+		component: () => import('../pages/dev/Dev.vue'),
+		children: [
+			{
+				path: 'colors',
+				name: 'dev-colors',
+				meta: { title: 'Colors' },
+				component: () => import('../pages/dev/colors/DevColors.vue')
+			},
+			{
+				path: 'input',
+				name: 'dev-input',
+				meta: { title: 'Input' },
+				component: () => import('../pages/dev/input/DevInput.vue')
+			}
+		]
 	}
 ];
 

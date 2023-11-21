@@ -1,0 +1,30 @@
+.color-samples {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 1rem;
+	align-items: center;
+
+	.color-label {
+		text-align: right;
+		font-weight: var(--fw-bold);
+	}
+
+	.color-sample {
+		height: 4rem;
+		background-color: var(--_clr-background);
+		border-radius: var(--br-xs);
+		overflow: hidden;
+	}
+}
+
+.color-labels {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 1rem;
+	margin-bottom: var(--spc-md);
+
+	.color-label {
+		font-size: var(--fs-xs);
+		text-align: center;
+	}
+}
