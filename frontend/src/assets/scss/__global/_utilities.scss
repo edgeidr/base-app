@@ -1,0 +1,41 @@
+@use './__variables' as variables;
+
+// TEXT-ALIGNMENT
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+// SPACING
+@each $size in variables.$sizes {
+	.p {
+		&-#{$size} {
+			padding: var(--spc-#{$size});
+		}
+
+		@each $side, $side-short in variables.$sides {
+			&#{$side-short}-#{$size} {
+				padding-#{$side}: var(--spc-#{$size});
+			}
+		}
+	}
+
+	.m {
+		&-#{$size} {
+			margin: var(--spc-#{$size});
+		}
+
+		@each $side, $side-short in variables.$sides {
+			&#{$side-short}-#{$size} {
+				margin-#{$side}: var(--spc-#{$size});
+			}
+		}
+	}
+}

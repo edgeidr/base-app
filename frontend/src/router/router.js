@@ -28,6 +28,11 @@ const routes = [
 				component: () => import('../pages/auth/Register.vue')
 			}
 		]
+	},
+	{
+		path: '/dev',
+		name: 'dev',
+		component: () => import('../pages/dev/Dev.vue')
 	}
 ];
 
