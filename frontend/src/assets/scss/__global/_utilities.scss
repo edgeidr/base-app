@@ -47,3 +47,25 @@
 		}
 	}
 }
+
+@each $color, $color-value in variables.$colors {
+	.text-#{$color} {
+		color: #{$color-value};
+
+		@each $shade in variables.$color-shades {
+			&--#{$shade} {
+				color: var(--clr-#{$color}--#{$shade});
+			}
+		}
+	}
+
+	.bg-#{$color} {
+		color: #{$color-value};
+
+		@each $shade in variables.$color-shades {
+			&--#{$shade} {
+				color: var(--clr-#{$color}--#{$shade});
+			}
+		}
+	}
+}

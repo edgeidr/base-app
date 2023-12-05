@@ -1,0 +1,53 @@
+@use '../../assets/scss/__global/__variables' as variables;
+
+.link {
+	--_clr-text: var(--clr-primary);
+	--_clr-hover: var(--clr-primary--600);
+
+	color: var(--_clr-text);
+	text-decoration: none;
+	cursor: pointer;
+
+	&:active {
+		text-decoration: underline;
+	}
+
+	&:hover {
+		color: var(--_clr-hover);
+	}
+
+	&.link--primary {
+		--_clr-text: var(--clr-primary);
+		--_clr-hover: var(--clr-primary--600);
+	}
+
+	&.link--secondary {
+		--_clr-text: var(--clr-secondary);
+		--_clr-hover: var(--clr-secondary--600);
+	}
+
+	&.link--accent {
+		--_clr-text: var(--clr-accent);
+		--_clr-hover: var(--clr-accent--600);
+	}
+
+	&.link--success {
+		--_clr-text: var(--clr-success);
+		--_clr-hover: var(--clr-success--600);
+	}
+
+	&.link--danger {
+		--_clr-text: var(--clr-danger);
+		--_clr-hover: var(--clr-danger--600);
+	}
+
+	&.link--warning {
+		--_clr-text: var(--clr-warning);
+		--_clr-hover: var(--clr-warning--600);
+	}
+
+	&.link--info {
+		--_clr-text: var(--clr-info);
+		--_clr-hover: var(--clr-info--600);
+	}
+}

@@ -14,7 +14,12 @@
 				</EInput>
 
 				<div class="mt-xs text-right">
-					<span class="text-sm">Forgot password?</span>
+					<ELink
+						to="#"
+						class="text-sm"
+						color="info">
+						Forgot password?
+					</ELink>
 				</div>
 			</div>
 		</div>
@@ -29,7 +34,14 @@
 			</div>
 
 			<div class="mt-md">
-				<span class="text-sm">Don't have an account? Sign up</span>
+				<span class="text-sm">
+					Don't have an account?
+					<ELink
+						:to="{ name: 'register' }"
+						color="primary">
+						Sign up
+					</ELink>
+				</span>
 			</div>
 		</div>
 	</form>
