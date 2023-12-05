@@ -39,3 +39,11 @@
 		}
 	}
 }
+
+@each $size in variables.$font-sizes {
+	.text {
+		&-#{$size} {
+			font-size: var(--fs-#{$size});
+		}
+	}
+}
