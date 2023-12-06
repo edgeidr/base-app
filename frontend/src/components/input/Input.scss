@@ -1,47 +1,34 @@
 .input-wrapper {
 	--_clr-label: var(--clr-text--700);
-
 	position: relative;
-	background-color: var(--clr-text--100);
-	padding-inline: var(--spc-sm);
-	padding-block: var(--spc-xs);
-	border-radius: var(--br-xs);
-	border: none;
-	box-shadow: var(--shd-md);
-	width: 100%;
-	cursor: text;
 
 	&:focus-within {
 		--_clr-label: var(--clr-accent);
-
-		outline: var(--outline);
-		outline-offset: var(--outline-offset);
-	}
-
-	&.valid {
-		--_clr-label: var(--clr-accent);
-	}
-
-	&.invalid {
-		--_clr-label: var(--clr-danger);
 	}
 }
 
 .input-label {
-	display: block;
-	width: fit-content;
 	color: var(--_clr-label);
 	line-height: 1;
 	font-size: var(--fs-sm);
+	position: absolute;
+	margin: var(--spc-xs) var(--spc-sm);
+	pointer-events: none;
 }
 
 .input {
 	border: none;
 	outline: none;
-	margin-top: var(--spc-2xs);
-	color: var(--clr-background);
+	padding-top: calc(var(--fs-md) + var(--spc-sm));
+	padding-bottom: var(--spc-xs);
+	padding-inline: var(--spc-sm);
+	border-radius: var(--br-xs);
 	width: 100%;
-	font-size: var(--fs-md);
+	background-color: var(--clr-text--100);
 	line-height: 1;
-	background-color: inherit;
+
+	&:focus {
+		outline: var(--outline);
+		outline-offset: var(--outline-offset);
+	}
 }
