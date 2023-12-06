@@ -1,9 +1,18 @@
 .input-wrapper {
 	--_clr-label: var(--clr-text--700);
+
 	position: relative;
 
 	&:focus-within {
 		--_clr-label: var(--clr-accent);
+	}
+
+	&.valid {
+		--_clr-label: var(--clr-accent);
+	}
+
+	&.invalid {
+		--_clr-label: var(--clr-danger);
 	}
 }
 
@@ -19,13 +28,13 @@
 .input {
 	border: none;
 	outline: none;
-	padding-top: calc(var(--fs-md) + var(--spc-sm));
+	padding-top: calc(var(--fs-sm) + var(--spc-sm));
 	padding-bottom: var(--spc-xs);
 	padding-inline: var(--spc-sm);
 	border-radius: var(--br-xs);
 	width: 100%;
 	background-color: var(--clr-text--100);
-	line-height: 1;
+	box-shadow: var(--shd-md);
 
 	&:focus {
 		outline: var(--outline);
