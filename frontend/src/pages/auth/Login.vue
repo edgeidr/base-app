@@ -24,7 +24,7 @@
 			</div>
 		</div>
 
-		<div class="mt-lg">
+		<div class="mt-md">
 			<div class="mt-md">
 				<EButton
 					type="submit"
