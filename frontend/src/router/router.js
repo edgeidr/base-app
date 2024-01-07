@@ -3,13 +3,17 @@ import { useAuthStore } from '../stores/global/auth';
 
 const routes = [
 	{
-		meta: { authenticated: true },
-		component: () => import('../components/page-layouts/admin-layout/AdminLayout.vue'),
+		meta: { authenticated: null },
+		component: () => import('../components/page-layouts/user-layout/UserLayout.vue'),
 		children: [
 			{
 				path: '/',
 				name: 'home',
 				component: () => import('../pages/home/Home.vue')
+			},
+			{
+				path: '/home',
+				redirect: { name: 'home' }
 			}
 		]
 	},
@@ -39,18 +43,6 @@ const routes = [
 				name: 'dev-colors',
 				meta: { title: 'Colors' },
 				component: () => import('../pages/dev/colors/DevColors.vue')
-			},
-			{
-				path: 'input',
-				name: 'dev-input',
-				meta: { title: 'Input' },
-				component: () => import('../pages/dev/input/DevInput.vue')
-			},
-			{
-				path: 'button',
-				name: 'dev-button',
-				meta: { title: 'Button' },
-				component: () => import('../pages/dev/button/DevButton.vue')
 			}
 		]
 	}
@@ -63,22 +55,20 @@ export const router = createRouter({
 
 router.beforeEach((to, from, next) => {
 	const auth_store = useAuthStore();
-	const admin_redirect = { name: 'home' };
-	const user_redirect = { name: 'home' };
 
 	if (auth_store.is_logged_in) {
 		if (to.meta.authenticated) {
 			next();
+		} else if (to.meta.authenticated == null) {
+			next();
 		} else {
-			if (auth_store.user.role_id === 1) {
-				next(admin_redirect);
-			} else {
-				next(user_redirect);
-			}
+			next(from.name);
 		}
 	} else {
 		if (to.meta.authenticated) {
-			next({ name: 'login' });
+			next(from.name);
+		} else if (to.meta.authenticated == null) {
+			next();
 		} else {
 			next();
 		}
