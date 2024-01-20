@@ -1,0 +1,25 @@
+@use '../../assets/scss/__global/__variables' as variables;
+
+.icon-wrapper {
+	display: inline-flex;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+
+	.icon {
+		width: 2em;
+		height: 2em;
+
+		@each $color_name, $color_value in variables.$colors {
+			&.icon--#{$color_name} {
+				color: var(--clr-#{$color_name});
+			}
+		}
+
+		@each $size in variables.$font-sizes {
+			&.icon--#{$size} {
+				font-size: var(--fs-#{$size});
+			}
+		}
+	}
+}
