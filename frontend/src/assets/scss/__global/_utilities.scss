@@ -102,11 +102,11 @@
 	}
 
 	.bg-#{$color} {
-		color: #{$color-value};
+		background-color: #{$color-value};
 
 		@each $shade in variables.$color-shades {
 			&--#{$shade} {
-				color: var(--clr-#{$color}--#{$shade});
+				background-color: var(--clr-#{$color}--#{$shade});
 			}
 		}
 	}
