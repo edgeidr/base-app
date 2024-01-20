@@ -1,6 +1,32 @@
 @use './__variables' as variables;
 
-// TEXT-ALIGNMENT
+// FLEX / GRID
+.flex {
+	display: flex;
+}
+
+.flex-row {
+	flex-direction: row;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.grid {
+	display: grid;
+	align-items: start;
+}
+
+.grid-row {
+	grid-auto-flow: row;
+}
+
+.grid-col {
+	grid-auto-flow: column;
+}
+
+// FONT / TEXT
 .text-center {
 	text-align: center;
 }
@@ -11,6 +37,22 @@
 
 .text-right {
 	text-align: right;
+}
+
+.text-light {
+	font-weight: 300;
+}
+
+.text-normal {
+	font-weight: 400;
+}
+
+.text-bold {
+	font-weight: 700;
+}
+
+.no-line {
+	text-decoration-line: none;
 }
 
 // SPACING
