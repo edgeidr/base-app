@@ -3,17 +3,14 @@ import { useAuthStore } from '../stores/global/auth';
 
 const routes = [
 	{
-		meta: { authenticated: null },
+		path: '/',
 		component: () => import('../components/page-layouts/user-layout/UserLayout.vue'),
+		redirect: { name: 'home' },
 		children: [
 			{
-				path: '/',
+				path: '',
 				name: 'home',
 				component: () => import('../pages/home/Home.vue')
-			},
-			{
-				path: '/home',
-				redirect: { name: 'home' }
 			},
 			{
 				path: '/about',
@@ -23,8 +20,11 @@ const routes = [
 		]
 	},
 	{
-		meta: { authenticated: false },
+		path: '/auth',
+		name: 'auth',
 		component: () => import('../components/page-layouts/auth-layout/AuthLayout.vue'),
+		redirect: { name: 'login' },
+		meta: { authenticated: false },
 		children: [
 			{
 				path: '/login',
@@ -60,23 +60,14 @@ export const router = createRouter({
 
 router.beforeEach((to, from, next) => {
 	const auth_store = useAuthStore();
+	const is_logged_in = auth_store.is_logged_in;
 
-	if (auth_store.is_logged_in) {
-		if (to.meta.authenticated) {
-			next();
-		} else if (to.meta.authenticated == null) {
-			next();
-		} else {
-			next(from.name);
-		}
+	if (to.meta?.authenticated === true && !is_logged_in) {
+		next(from.name || '/auth');
+	} else if (to.meta?.authenticated === false && is_logged_in) {
+		next(from.name || '/');
 	} else {
-		if (to.meta.authenticated) {
-			next(from.name);
-		} else if (to.meta.authenticated == null) {
-			next();
-		} else {
-			next();
-		}
+		next();
 	}
 });
 
