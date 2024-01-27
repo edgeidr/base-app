@@ -2,3 +2,11 @@ main > section {
 	height: min(100dvh, 1080px);
 	overflow: hidden;
 }
+
+main > section:first-child:not(.header-overlap)::before {
+	content: '';
+	width: 100%;
+	height: var(--header-height);
+	background-color: transparent;
+	display: block;
+}
