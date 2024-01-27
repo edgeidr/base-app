@@ -1,5 +1,5 @@
 <template>
-	<section class="">
+	<section>
 		<img
 			:src="hero_image"
 			class="hero-image" />

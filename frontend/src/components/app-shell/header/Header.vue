@@ -1,5 +1,5 @@
 <template>
-	<header>
+	<header :class="hidden_class">
 		<nav class="[ breakout ][ header-nav ]">
 			<ul class="header-nav--left">
 				<li
@@ -38,18 +38,26 @@
 </template>
 
 <script setup>
+	import { computed } from 'vue';
 	import knotjam_logo from '../../../assets/images/KnotJam-logo.png';
+	import { useWindowScroll } from '@vueuse/core';
+
+	const { y } = useWindowScroll();
 
 	const left_nav = [
 		{ label: 'New Arrivals', link: '' },
 		{ label: 'Shop', link: '' },
-		{ label: 'About', link: '' }
+		{ label: 'About', link: { name: 'about' } }
 	];
 	const right_nav = [
 		{ label: 'Journal', link: '' },
 		{ label: 'Search', link: '' },
 		{ label: 'Cart', link: '' }
 	];
+
+	const hidden_class = computed(() => {
+		return y.value >= 100 ? 'hidden' : null;
+	});
 </script>
 
 <style lang="scss">

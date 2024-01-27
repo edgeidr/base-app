@@ -7,9 +7,9 @@
 </template>
 
 <script setup>
-	import SectionHero from './SectionHero.vue';
-	import SectionNewArrivals from './SectionNewArrivals.vue';
-	import SectionCategories from './SectionCategories.vue';
-	import SectionStory from './SectionStory.vue';
-	import SectionJournal from './SectionJournal.vue';
+	import SectionHero from './sections/SectionHero.vue';
+	import SectionNewArrivals from './sections/SectionNewArrivals.vue';
+	import SectionCategories from './sections/SectionCategories.vue';
+	import SectionStory from './sections/SectionStory.vue';
+	import SectionJournal from './sections/SectionJournal.vue';
 </script>
