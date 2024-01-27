@@ -9,7 +9,7 @@
 			{{ i * 100 }}
 		</span>
 
-		<span class="color-label">opaque</span>
+		<span class="color-label">translucent</span>
 
 		<span class="color-label">transparent</span>
 	</div>
@@ -25,7 +25,7 @@
 				class="color-sample"></div>
 
 			<div
-				:style="{ '--_clr-background': `var(--clr-${color}--opaque)` }"
+				:style="{ '--_clr-background': `var(--clr-${color}--translucent)` }"
 				class="color-sample"></div>
 
 			<div

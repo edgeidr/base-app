@@ -47,6 +47,7 @@
 
 	@each $color, $color-value in variables.$colors {
 		--clr-#{$color}: #{$color-value};
+		--clr-#{$color}--50: color-mix(in oklab, #{$color-value} 15%, white);
 		--clr-#{$color}--100: color-mix(in oklab, #{$color-value} 30%, white);
 		--clr-#{$color}--200: color-mix(in oklab, #{$color-value} 50%, white);
 		--clr-#{$color}--300: color-mix(in oklab, #{$color-value} 70%, white);
@@ -56,7 +57,7 @@
 		--clr-#{$color}--700: color-mix(in oklab, #{$color-value} 70%, black);
 		--clr-#{$color}--800: color-mix(in oklab, #{$color-value} 50%, black);
 		--clr-#{$color}--900: color-mix(in oklab, #{$color-value} 30%, black);
-		--clr-#{$color}--opaque: color-mix(in oklab, #{$color-value}, transparent 77%);
+		--clr-#{$color}--translucent: color-mix(in oklab, #{$color-value}, transparent 10%);
 		--clr-#{$color}--transparent: color-mix(in oklab, #{$color-value}, transparent 90%);
 	}
 }

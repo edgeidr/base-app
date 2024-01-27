@@ -13,11 +13,16 @@ $colors: (
 	'primary': #eec9cb,
 	'secondary': #fef1f1,
 	'accent': #000000,
-	'text': #3d3d3d,
+	'neutral': #3d3d3d,
 	'background': #e1e9ec,
 	'success': #22c55e,
 	'danger': #ef4444,
 	'warning': #eab308,
-	'info': #0ea5e9
+	'info': #0ea5e9,
+	'white': #ffffff,
+	'black': #000000,
+	'muted': #c0b8df,
+	'mint': #c8e1cf,
+	'lavender': #c0b8df
 );
-$color-shades: ('100', '200', '300', '400', '500', '600', '700', '800', '900', 'opaque', 'transparent');
+$color-shades: ('100', '200', '300', '400', '500', '600', '700', '800', '900', 'translucent', 'transparent');
