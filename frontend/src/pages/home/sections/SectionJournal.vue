@@ -23,7 +23,7 @@
 						class="item-image" />
 
 					<div>
-						<h4 class="text-body f-body font-normal">{{ item.name }}</h4>
+						<h4 class="f-body font-normal">{{ item.name }}</h4>
 					</div>
 				</div>
 			</div>
