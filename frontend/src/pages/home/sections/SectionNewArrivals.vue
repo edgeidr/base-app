@@ -35,8 +35,8 @@
 </template>
 
 <script setup>
-	import top from '../../assets/images/sample/top.jpg';
-	import bag from '../../assets/images/sample/bag.jpg';
+	import top from '@/assets/images/sample/top.jpg';
+	import bag from '@/assets/images/sample/bag.jpg';
 
 	const new_arrivals = [
 		{ name: 'Lemonade Top in Orange', brief_description: '100% Cotton', price: '₱ 550.00', image: top },

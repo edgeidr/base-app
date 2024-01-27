@@ -32,8 +32,8 @@
 </template>
 
 <script setup>
-	import camping from '../../assets/images/sample/camping.jpg';
-	import food from '../../assets/images/sample/food.webp';
+	import camping from '@/assets/images/sample/camping.jpg';
+	import food from '@/assets/images/sample/food.webp';
 
 	const new_arrivals = [
 		{ name: 'Camping in Luzon', brief_description: '100% Cotton', price: '₱ 550.00', image: camping },

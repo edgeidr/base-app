@@ -65,8 +65,8 @@
 </template>
 
 <script setup>
-	import tops from '../../assets/images/sample/AISHA.png';
-	import handbags from '../../assets/images/sample/BLOOM.png';
-	import dresses from '../../assets/images/sample/LIA.png';
-	import bottoms from '../../assets/images/sample/SUNYY.png';
+	import tops from '@/assets/images/sample/AISHA.png';
+	import handbags from '@/assets/images/sample/BLOOM.png';
+	import dresses from '@/assets/images/sample/LIA.png';
+	import bottoms from '@/assets/images/sample/SUNYY.png';
 </script>
