@@ -1,5 +1,5 @@
 <template>
-	<main class="content-grid">
+	<main>
 		<router-view></router-view>
 	</main>
 </template>

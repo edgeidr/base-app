@@ -1,10 +1,10 @@
-.header {
-	position: sticky;
+header {
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	padding-inline: var(--spc-md);
-	background-color: var(--clr-secondary);
+	background-color: var(--clr-white--translucent);
+	z-index: 1000;
 }
 
 .header-nav {
@@ -27,14 +27,9 @@
 	gap: var(--spc-xl);
 }
 
-.nav-link {
-	text-decoration: none;
-	color: var(--clr-text);
-
-	&:hover {
-		text-decoration: underline;
-		text-underline-offset: 3px;
-	}
+.nav-link:hover {
+	text-decoration: underline;
+	text-underline-offset: 3px;
 }
 
 .main-logo-wrapper {

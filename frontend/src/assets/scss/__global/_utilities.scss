@@ -1,5 +1,56 @@
 @use './__variables' as variables;
 
+.wrapper {
+	--_max-width: 1200px;
+	--_padding-inline: var(--spc-md);
+
+	width: min(var(--_max-width), 100% - (var(--_padding-inline) * 2));
+	margin-inline: auto;
+}
+
+.breakout {
+	--_max-width: 1250px;
+	--_padding-inline: var(--spc-md);
+
+	width: min(var(--_max-width), 100% - (var(--_padding-inline) * 2));
+	margin-inline: auto;
+}
+
+// ---------------------------------------
+
+// SIZING
+.h-screen {
+	height: 100vh;
+}
+
+.h-full {
+	height: 100%;
+}
+
+.h-auto {
+	height: auto;
+}
+
+.h-fit {
+	height: fit-content;
+}
+
+.w-screen {
+	width: 100vw;
+}
+
+.w-full {
+	width: 100%;
+}
+
+.w-auto {
+	width: auto;
+}
+
+.w-fit {
+	width: fit-content;
+}
+
 // FLEX / GRID
 .flex {
 	display: flex;
@@ -26,7 +77,56 @@
 	grid-auto-flow: column;
 }
 
+.align-items-center {
+	align-items: center;
+}
+
+.justify-content-center {
+	justify-content: center;
+}
+
+.place-items-center {
+	place-items: center;
+}
+
+// DISPLAY
+.contents {
+	display: contents;
+}
+
 // FONT / TEXT
+.f-header {
+	font-family: var(--f-header);
+}
+
+.f-subheader {
+	font-family: var(--f-subheader);
+}
+
+.f-body {
+	font-family: var(--f-body);
+}
+
+.f-caption {
+	font-family: var(--f-caption);
+}
+
+.text-header {
+	font-size: var(--fs-header);
+}
+
+.text-subheader {
+	font-size: var(--fs-subheader);
+}
+
+.text-body {
+	font-size: var(--fs-body);
+}
+
+.text-caption {
+	font-size: var(--fs-caption);
+}
+
 .text-center {
 	text-align: center;
 }
@@ -39,15 +139,15 @@
 	text-align: right;
 }
 
-.text-light {
+.font-light {
 	font-weight: 300;
 }
 
-.text-normal {
+.font-normal {
 	font-weight: 400;
 }
 
-.text-bold {
+.font-bold {
 	font-weight: 700;
 }
 
@@ -82,6 +182,15 @@
 	}
 }
 
+.px-section {
+	padding-inline: calc(var(--spc-2xl) * 2);
+}
+
+.py-section {
+	padding-block: calc(var(--spc-2xl) * 2.5);
+}
+
+// COLOR
 @each $size in variables.$font-sizes {
 	.text {
 		&-#{$size} {

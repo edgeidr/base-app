@@ -18,7 +18,7 @@ body {
 	min-height: 100dvh;
 	line-height: 1.5;
 	font-family: var(--f-body);
-	color: var(--clr-text);
+	color: var(--clr-neutral);
 	background-color: var(--clr-background);
 }
 
@@ -76,4 +76,14 @@ h5 {
 
 h6 {
 	font-size: var(--fs-md);
+}
+
+a {
+	text-decoration: none;
+	color: var(--clr-neutral);
+}
+
+main > section {
+	height: min(100dvh, 1080px);
+	overflow: hidden;
 }

@@ -1,5 +1,5 @@
 <template>
-	<div class="main-wrapper auth-wrapper">
+	<div class="wrapper auth-wrapper">
 		<ECard class="auth-card">
 			<router-view></router-view>
 		</ECard>

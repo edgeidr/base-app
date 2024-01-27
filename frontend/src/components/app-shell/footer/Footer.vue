@@ -1,6 +1,6 @@
 <template>
-	<footer class="footer">
-		<div class="[ footer-inner ] [ main-wrapper ]">
+	<footer>
+		<div class="[ footer-inner ] [ wrapper ]">
 			<div class="footer-body">
 				<div class="footer-branding">
 					<div>
@@ -27,7 +27,7 @@
 
 					<div>
 						<div class="mb-md text-sm">
-							<p class="text-bold">Handcrafted crochet</p>
+							<p class="font-bold">Handcrafted crochet</p>
 							<p>Made with love</p>
 							<p>Bulacan, Philippines</p>
 						</div>
@@ -35,7 +35,7 @@
 						<div class="text-sm">
 							<a
 								:href="email_href"
-								class="text-text no-line">
+								class="text-neutral no-line">
 								{{ email }}
 							</a>
 						</div>

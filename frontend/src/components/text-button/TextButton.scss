@@ -1,17 +1,12 @@
-.button {
-	--_clr-background: var(--clr-background--100);
-	--_clr-neutral: var(--clr-neutral--900);
+.text-button {
+	--_clr-neutral: var(--clr-neutral--500);
 
 	position: relative;
-	background-color: var(--_clr-background);
-	padding: var(--spc-md) var(--spc-lg);
-	border-radius: var(--br-round);
 	border: none;
-	box-shadow: var(--shd-md);
-	width: 100%;
-	font-weight: var(--fw-bold);
+	background-color: transparent;
 	color: var(--_clr-neutral);
-	text-align: center;
+	text-decoration: underline;
+	text-underline-offset: 3px;
 	cursor: pointer;
 
 	&:focus-visible {
@@ -23,37 +18,37 @@
 		filter: brightness(80%);
 	}
 
-	&.button--primary {
+	&.text-button--primary {
 		--_clr-background: var(--clr-primary);
 		--_clr-neutral: var(--clr-primary--900);
 	}
 
-	&.button--secondary {
+	&.text-button--secondary {
 		--_clr-background: var(--clr-secondary);
 		--_clr-neutral: var(--clr-secondary--100);
 	}
 
-	&.button--accent {
+	&.text-button--accent {
 		--_clr-background: var(--clr-accent);
 		--_clr-neutral: var(--clr-accent--900);
 	}
 
-	&.button--success {
+	&.text-button--success {
 		--_clr-background: var(--clr-success);
 		--_clr-neutral: var(--clr-success--900);
 	}
 
-	&.button--danger {
+	&.text-button--danger {
 		--_clr-background: var(--clr-danger);
 		--_clr-neutral: var(--clr-danger--100);
 	}
 
-	&.button--warning {
+	&.text-button--warning {
 		--_clr-background: var(--clr-warning);
 		--_clr-neutral: var(--clr-warning--900);
 	}
 
-	&.button--info {
+	&.text-button--info {
 		--_clr-background: var(--clr-info);
 		--_clr-neutral: var(--clr-info--100);
 	}

@@ -1,11 +1,10 @@
-.footer {
+footer {
 	background-color: var(--clr-primary);
 	width: 100%;
-	padding-inline: var(--spc-md);
 }
 
 .footer-inner {
-	padding-block: var(--spc-2xl);
+	padding: var(--spc-2xl) 0;
 }
 
 .footer-body {
@@ -39,8 +38,6 @@
 
 .footer-nav-link {
 	font-size: var(--fs-sm);
-	text-decoration: none;
-	color: var(--clr-text);
 	text-underline-offset: 3px;
 
 	&:hover {

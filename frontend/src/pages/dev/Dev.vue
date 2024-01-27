@@ -1,5 +1,5 @@
 <template>
-	<div class="[ main-wrapper ] [ py-xl ]">
+	<div class="[ wrapper ] [ py-xl ]">
 		<h1 class="text-center mb-2xl">{{ title }}</h1>
 
 		<div class="px-2xl">

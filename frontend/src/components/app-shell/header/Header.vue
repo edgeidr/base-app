@@ -1,6 +1,6 @@
 <template>
-	<header class="header">
-		<nav class="[ main-wrapper ][ header-nav ]">
+	<header>
+		<nav class="[ breakout ][ header-nav ]">
 			<ul class="header-nav--left">
 				<li
 					v-for="(item, index) in left_nav"

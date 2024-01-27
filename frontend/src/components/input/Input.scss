@@ -1,5 +1,5 @@
 .input-wrapper {
-	--_clr-label: var(--clr-text--700);
+	--_clr-label: var(--clr-neutral--700);
 
 	position: relative;
 
@@ -33,7 +33,7 @@
 	padding-inline: var(--spc-sm);
 	border-radius: var(--br-xs);
 	width: 100%;
-	background-color: var(--clr-text--100);
+	background-color: var(--clr-neutral--100);
 	box-shadow: var(--shd-md);
 
 	&:focus {
