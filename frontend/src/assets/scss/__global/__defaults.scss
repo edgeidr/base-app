@@ -82,8 +82,3 @@ a {
 	text-decoration: none;
 	color: var(--clr-neutral);
 }
-
-main > section {
-	height: min(100dvh, 1080px);
-	overflow: hidden;
-}
