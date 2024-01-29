@@ -1,0 +1,14 @@
+.section-about {
+	.about-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.about-title {
+		flex: 1 0 300px;
+	}
+
+	.about-content {
+		flex: 1 1 600px;
+	}
+}
