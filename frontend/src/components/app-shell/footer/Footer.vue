@@ -43,33 +43,29 @@
 				</div>
 
 				<nav class="footer-nav">
-					<div>
-						<ul class="footer-nav-list">
-							<li
-								v-for="(item, index) in left_nav"
-								:key="index">
-								<router-link
-									:to="item.link"
-									class="footer-nav-link">
-									{{ item.label }}
-								</router-link>
-							</li>
-						</ul>
-					</div>
+					<ul class="footer-nav-list">
+						<li
+							v-for="(item, index) in left_nav"
+							:key="index">
+							<router-link
+								:to="item.link"
+								class="footer-nav-link">
+								{{ item.label }}
+							</router-link>
+						</li>
+					</ul>
 
-					<div>
-						<ul class="footer-nav-list">
-							<li
-								v-for="(item, index) in right_nav"
-								:key="index">
-								<router-link
-									:to="item.link"
-									class="footer-nav-link">
-									{{ item.label }}
-								</router-link>
-							</li>
-						</ul>
-					</div>
+					<ul class="footer-nav-list">
+						<li
+							v-for="(item, index) in right_nav"
+							:key="index">
+							<router-link
+								:to="item.link"
+								class="footer-nav-link">
+								{{ item.label }}
+							</router-link>
+						</li>
+					</ul>
 				</nav>
 			</div>
 
