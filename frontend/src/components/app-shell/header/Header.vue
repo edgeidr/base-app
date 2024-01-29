@@ -45,6 +45,16 @@
 						{{ item.label }}
 					</router-link>
 				</li>
+
+				<li
+					class="header-nav-item"
+					data-display="all">
+					<router-link
+						:to="''"
+						class="nav-link">
+						Cart ({{ cart_count }})
+					</router-link>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -52,9 +62,11 @@
 
 <script setup>
 	import { computed } from 'vue';
-	import knotjam_logo from '../../../assets/images/KnotJam-logo.png';
+	import knotjam_logo from '@/assets/images/KnotJam-logo.png';
 	import { useWindowScroll } from '@vueuse/core';
+	import { useAuthStore } from '@/stores/global/auth';
 
+	const auth_store = useAuthStore();
 	const { y } = useWindowScroll();
 
 	const left_nav = [
@@ -70,6 +82,10 @@
 
 	const hidden_class = computed(() => {
 		return y.value >= 100 ? 'hidden' : null;
+	});
+
+	const cart_count = computed(() => {
+		return auth_store.cart_count;
 	});
 </script>
 
