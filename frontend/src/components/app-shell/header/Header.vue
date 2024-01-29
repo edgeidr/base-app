@@ -3,8 +3,19 @@
 		<nav class="[ breakout ][ header-nav ]">
 			<ul class="header-nav--left">
 				<li
+					class="header-nav-item header-nav-menu"
+					data-display="mobile">
+					<button class="btn-menu">
+						<div class="menu-line"></div>
+						<div class="menu-line"></div>
+						<div class="menu-line"></div>
+					</button>
+				</li>
+
+				<li
 					v-for="(item, index) in left_nav"
-					:key="index">
+					:key="index"
+					class="header-nav-item">
 					<router-link
 						:to="item.link"
 						class="nav-link">
@@ -25,7 +36,9 @@
 			<ul class="header-nav--right">
 				<li
 					v-for="(item, index) in right_nav"
-					:key="index">
+					:key="index"
+					class="header-nav-item"
+					:data-display="item.display">
 					<router-link
 						:to="item.link"
 						class="nav-link">
@@ -52,7 +65,7 @@
 	const right_nav = [
 		{ label: 'Journal', link: '' },
 		{ label: 'Search', link: '' },
-		{ label: 'Cart', link: '' }
+		{ label: 'Cart', link: '', display: 'all' }
 	];
 
 	const hidden_class = computed(() => {
