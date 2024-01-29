@@ -64,6 +64,10 @@
 	flex-direction: column;
 }
 
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
 .grid {
 	display: grid;
 	align-items: start;
@@ -87,6 +91,10 @@
 
 .place-items-center {
 	place-items: center;
+}
+
+.justify-content-between {
+	justify-content: space-between;
 }
 
 // DISPLAY
@@ -162,6 +170,12 @@
 			&#{$side-short}-#{$size} {
 				margin-#{$side}: var(--spc-#{$size});
 			}
+		}
+	}
+
+	.gap {
+		&-#{$size} {
+			gap: var(--spc-#{$size});
 		}
 	}
 }
