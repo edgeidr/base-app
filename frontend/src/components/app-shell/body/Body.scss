@@ -9,4 +9,8 @@ main > section:first-child:not(.header-overlap)::before {
 	height: var(--header-height);
 	background-color: transparent;
 	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
 }
