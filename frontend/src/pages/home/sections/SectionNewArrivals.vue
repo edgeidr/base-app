@@ -23,7 +23,7 @@
 						class="item-image" />
 
 					<div>
-						<h4 class="f-body font-normal">{{ item.name }}</h4>
+						<h4 class="f-body font-normal text-md">{{ item.name }}</h4>
 						<p class="text-muted">{{ item.brief_description }}</p>
 					</div>
 
