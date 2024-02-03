@@ -1,5 +1,5 @@
 <template>
-	<section class="[ wrapper h-auto py-section ][ section-about ]">
+	<section class="[ wrapper ][ section-about ]">
 		<div class="about-wrapper">
 			<h1 class="about-title mb-lg">About</h1>
 

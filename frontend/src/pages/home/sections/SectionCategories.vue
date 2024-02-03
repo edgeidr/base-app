@@ -1,6 +1,6 @@
 <template>
-	<section class="[ section-categories-wrapper ][ bg-mint h-auto ]">
-		<div class="[ section-categories ][ py-section wrapper ]">
+	<section class="[ section-categories-wrapper ][ bg-mint ]">
+		<div class="[ section-categories ][ wrapper ]">
 			<div class="category-list">
 				<div class="category-item">
 					<router-link

@@ -1,5 +1,5 @@
 <template>
-	<section class="header-overlap">
+	<section class="h-dvh p-0">
 		<img
 			:src="hero_image"
 			class="hero-image" />

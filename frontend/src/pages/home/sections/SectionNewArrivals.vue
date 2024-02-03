@@ -1,6 +1,6 @@
 <template>
-	<section class="bg-white h-auto">
-		<div class="[ wrapper py-section ][ section-item-list ]">
+	<section class="bg-white">
+		<div class="[ wrapper ][ section-item-list ]">
 			<div class="section-info">
 				<h2>New Arrivals</h2>
 				<p>Let your personality shine with handcrafted pieces made just for you.</p>

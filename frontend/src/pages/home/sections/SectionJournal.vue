@@ -1,6 +1,6 @@
 <template>
-	<section class="bg-lavender h-auto">
-		<div class="[ wrapper py-section ][ section-item-list section-journal ]">
+	<section class="bg-lavender">
+		<div class="[ wrapper ][ section-item-list section-journal ]">
 			<div class="section-info">
 				<h2>Journal</h2>
 				<p>Stories behind the knots.</p>

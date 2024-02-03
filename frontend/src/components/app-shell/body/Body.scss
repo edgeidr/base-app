@@ -1,16 +1,4 @@
 main > section {
-	height: min(100dvh, 1080px);
 	overflow: hidden;
-}
-
-main > section:first-child:not(.header-overlap)::before {
-	content: '';
-	width: 100%;
-	height: var(--header-height);
-	background-color: transparent;
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
+	padding-block: calc(var(--spc-2xl) * 2.5);
 }

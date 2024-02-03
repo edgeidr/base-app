@@ -19,6 +19,10 @@
 // ---------------------------------------
 
 // SIZING
+.h-dvh {
+	height: min(100dvh, 1080px);
+}
+
 .h-screen {
 	height: 100vh;
 }
@@ -178,14 +182,6 @@
 			gap: var(--spc-#{$size});
 		}
 	}
-}
-
-.px-section {
-	padding-inline: calc(var(--spc-2xl) * 2);
-}
-
-.py-section {
-	padding-block: calc(var(--spc-2xl) * 2.5);
 }
 
 // COLOR

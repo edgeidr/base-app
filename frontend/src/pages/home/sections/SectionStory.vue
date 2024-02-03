@@ -1,5 +1,5 @@
 <template>
-	<section class="section-story-wrapper">
+	<section class="[ section-story-wrapper ][ h-dvh p-0 ]">
 		<div class="section-story wrapper">
 			<h2 class="text-2xl">Why KnotJam?</h2>
 
