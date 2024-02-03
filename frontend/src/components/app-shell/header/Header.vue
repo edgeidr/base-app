@@ -76,8 +76,7 @@
 	];
 	const right_nav = [
 		{ label: 'Journal', link: '' },
-		{ label: 'Search', link: '' },
-		{ label: 'Cart', link: '', display: 'all' }
+		{ label: 'Search', link: '' }
 	];
 
 	const hidden_class = computed(() => {

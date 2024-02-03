@@ -11,7 +11,7 @@ export const useAuthStore = defineStore('auth', {
 			return !_.isEmpty(state.user);
 		},
 		cart_count: (state) => {
-			return state.cart.length;
+			return state.cart.length >= 100 ? '99+' : state.cart.length;
 		}
 	},
 	actions: {}
