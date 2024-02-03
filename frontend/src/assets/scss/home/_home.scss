@@ -51,6 +51,14 @@
 	}
 }
 
+// .section-categories-wrapper {
+// 	background-color: var(--clr-mint);
+// 	background-image: url('@/assets/images/sample/bg-categories.png');
+// 	background-repeat: repeat-y;
+// 	background-size: contain;
+// 	background-position: top;
+// }
+
 .section-categories {
 	.category-list {
 		display: flex;
@@ -72,6 +80,78 @@
 		text-align: center;
 		display: grid;
 		place-items: center;
+		position: relative;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			background-size: contain;
+			background-repeat: no-repeat;
+			aspect-ratio: 1;
+			z-index: -1;
+		}
+
+		&[data-index='1'] {
+			&::before {
+				background-image: url('@/assets/images/sample/flower2.png');
+				width: 120%;
+				top: -30%;
+				right: 10%;
+			}
+
+			&::after {
+				background-image: url('@/assets/images/sample/flower1.png');
+				width: 38%;
+				right: -20%;
+				bottom: 10%;
+				rotate: 8deg;
+			}
+		}
+
+		&[data-index='2'] {
+			&::before {
+				background-image: url('@/assets/images/sample/flower2.png');
+				width: 50%;
+				left: -30%;
+				bottom: 5%;
+			}
+
+			&::after {
+				background-image: url('@/assets/images/sample/flower1.png');
+				width: 110%;
+				right: -50%;
+				bottom: 5%;
+				rotate: 8deg;
+			}
+		}
+
+		&[data-index='3'] {
+			&::before {
+				background-image: url('@/assets/images/sample/flower2.png');
+				width: 110%;
+				top: -25%;
+				right: -80%;
+			}
+
+			&::after {
+				background-image: url('@/assets/images/sample/flower1.png');
+				width: 100%;
+				left: -70%;
+				bottom: -25%;
+				rotate: 8deg;
+			}
+		}
+
+		&[data-index='4'] {
+			&::after {
+				background-image: url('@/assets/images/sample/flower1.png');
+				width: 150%;
+				right: -50%;
+				bottom: 12%;
+				rotate: 8deg;
+			}
+		}
 	}
 
 	.category-content--sm {

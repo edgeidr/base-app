@@ -1,12 +1,14 @@
 <template>
-	<section class="bg-mint h-auto">
+	<section class="[ section-categories-wrapper ][ bg-mint h-auto ]">
 		<div class="[ section-categories ][ py-section wrapper ]">
 			<div class="category-list">
 				<div class="category-item">
 					<router-link
 						to=""
 						class="contents">
-						<div class="category-content">
+						<div
+							data-index="1"
+							class="category-content">
 							<img
 								:src="tops"
 								alt=""
@@ -20,7 +22,9 @@
 					<router-link
 						to=""
 						class="contents">
-						<div class="category-content category-content--sm">
+						<div
+							data-index="2"
+							class="category-content category-content--sm">
 							<img
 								:src="handbags"
 								alt=""
@@ -36,7 +40,9 @@
 					<router-link
 						to=""
 						class="contents">
-						<div class="category-content category-content--sm">
+						<div
+							data-index="3"
+							class="category-content category-content--sm">
 							<img
 								:src="dresses"
 								alt=""
@@ -50,7 +56,9 @@
 					<router-link
 						to=""
 						class="contents">
-						<div class="category-content">
+						<div
+							data-index="4"
+							class="category-content">
 							<img
 								:src="bottoms"
 								alt=""
