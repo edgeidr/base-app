@@ -1,5 +1,5 @@
 <template>
-	<section class="bg-mint">
+	<section>
 		<div class="wrapper">
 			<div class="category-list">
 				<div
