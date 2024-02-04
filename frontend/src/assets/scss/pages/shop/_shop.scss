@@ -9,6 +9,10 @@
 	align-items: end;
 }
 
+.category-title {
+	font-size: var(--fs-xl);
+}
+
 .category-body {
 	margin-top: var(--spc-md);
 	display: grid;
@@ -16,13 +20,20 @@
 	gap: var(--spc-md);
 }
 
-.category-item {
+.product-image-wrapper {
+	overflow: hidden;
+	border-radius: var(--br-md);
+	box-shadow: var(--shd-md);
 }
 
 .product-image {
-	box-shadow: var(--shd-md);
 	aspect-ratio: 3/4;
-	border-radius: var(--br-md);
+	object-fit: cover;
+	transition: scale 0.5s;
+
+	&:hover {
+		scale: 1.1;
+	}
 }
 
 .product-title {

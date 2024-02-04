@@ -7,7 +7,11 @@
 					:key="category.slug">
 					<div class="category-header">
 						<h3 class="category-title">{{ category.title }}</h3>
-						<router-link :to="category.url">View all</router-link>
+						<router-link
+							:to="category.url"
+							class="text-sm">
+							View all
+						</router-link>
 					</div>
 
 					<div class="category-body">
@@ -16,10 +20,12 @@
 							:key="product.slug"
 							:to="product.url">
 							<div class="category-item">
-								<img
-									:src="product.image"
-									alt=""
-									class="product-image" />
+								<div class="product-image-wrapper">
+									<img
+										:src="product.image"
+										alt=""
+										class="product-image" />
+								</div>
 								<p class="product-title">{{ product.title }}</p>
 							</div>
 						</router-link>
