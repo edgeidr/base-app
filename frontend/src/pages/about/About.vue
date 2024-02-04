@@ -56,3 +56,7 @@
 <script setup>
 	import about from '../../assets/images/sample/about.png';
 </script>
+
+<style lang="scss">
+	@import '@/assets/scss/pages/about/about';
+</style>
