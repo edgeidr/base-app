@@ -71,7 +71,7 @@
 
 	const left_nav = [
 		{ label: 'New Arrivals', link: '' },
-		{ label: 'Shop', link: '' },
+		{ label: 'Shop', link: { name: 'shop' } },
 		{ label: 'About', link: { name: 'about' } }
 	];
 	const right_nav = [

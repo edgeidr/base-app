@@ -16,6 +16,30 @@ const routes = [
 				path: '/about',
 				name: 'about',
 				component: () => import('../pages/about/About.vue')
+			},
+			{
+				path: '/shop',
+				name: 'shop',
+				component: () => import('../pages/shop/Shop.vue'),
+				children: [
+					{
+						path: ':category',
+						name: 'category',
+						component: () => import('../pages/shop/Shop.vue'),
+						children: [
+							{
+								path: ':product',
+								name: 'product',
+								component: () => import('../pages/shop/Shop.vue')
+							}
+						]
+					}
+				]
+			},
+			{
+				path: '/:collection',
+				name: 'collection',
+				component: () => import('../pages/shop/Shop.vue')
 			}
 		]
 	},
