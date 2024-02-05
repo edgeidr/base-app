@@ -1,7 +1,7 @@
 @use './__variables' as variables;
 
 .wrapper {
-	--_max-width: 1200px;
+	--_max-width: 1100px;
 	--_padding-inline: var(--spc-md);
 
 	width: min(var(--_max-width), 100% - (var(--_padding-inline) * 2));
