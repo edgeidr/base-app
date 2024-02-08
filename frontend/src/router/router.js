@@ -19,18 +19,24 @@ const routes = [
 			},
 			{
 				path: '/shop',
-				name: 'shop',
-				component: () => import('../pages/shop/Shop.vue'),
 				children: [
 					{
+						path: '',
+						name: 'shop',
+						component: () => import('../pages/shop/Shop.vue')
+					},
+					{
 						path: ':category',
-						name: 'category',
-						component: () => import('../pages/shop/Shop.vue'),
 						children: [
+							{
+								path: '',
+								name: 'category',
+								component: () => import('../pages/category/Category.vue')
+							},
 							{
 								path: ':product',
 								name: 'product',
-								component: () => import('../pages/shop/Shop.vue')
+								component: () => import('../pages/product/Product.vue')
 							}
 						]
 					}
@@ -93,6 +99,8 @@ router.beforeEach((to, from, next) => {
 	} else {
 		next();
 	}
+
+	document.body.setAttribute('data-page', to.name || null);
 });
 
 export default router;

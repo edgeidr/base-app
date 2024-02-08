@@ -13,7 +13,3 @@
 	import SectionStory from './sections/SectionStory.vue';
 	import SectionJournal from './sections/SectionJournal.vue';
 </script>
-
-<style lang="scss">
-	@import '@/assets/scss/pages/home/home';
-</style>
